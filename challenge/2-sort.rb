@@ -1,7 +1,7 @@
 #!/usr/bin/ruby
-# Collect all arguments, convert them to integers, sort them numerically, and print each one
+# Collect only valid integer arguments, sort them numerically, and print each one
 
-numbers = ARGV.map { |arg| arg.to_i }
+numbers = ARGV.map { |arg| Integer(arg) rescue nil }.compact
 numbers.sort.each do |num|
   puts num
 end
