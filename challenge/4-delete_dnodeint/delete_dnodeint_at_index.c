@@ -26,6 +26,7 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 		return (1);
 	}
 
+	/* الانتقال إلى العقدة المطلوبة بدقة */
 	while (current != NULL && i < index)
 	{
 		current = current->next;
